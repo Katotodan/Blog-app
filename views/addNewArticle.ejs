@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Article</title>
+</head>
+<body>
+    <h1 class="p-4 ">New Article</h1>
+    <p class="msg text-center"><%=msg%></p>
+    <form action="./addNewArticle" class="m-4" method="post">
+        <%- include('__form'); %>
+        <a href="/" class="text-dark text-decoration-none p-2  my-3 btn bg-secondary">Cancel</a>
+        <button type="submit" class="p-2 btn bg-primary ">Submit</button>
+    </form>
+    <script>
+        setTimeout(() => {
+            document.querySelector('.msg').innerHTML =""
+        }, 3000);
+    </script>
+</body>
+</html>
